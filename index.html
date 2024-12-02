@@ -9,7 +9,9 @@
 
 <body>
     <h1 id="sound"></h1>
+    <img id="img" src="" width="500" height="600" />
     <input id="name" type="text">
+
     <button onclick="getSound()">API 요청</button>
     <script>
         function getSound() {
@@ -17,8 +19,9 @@
             fetch(`http://localhost:5000/sound/${name}`) // api for the get request
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data.sound)
+                    console.log(data)
                     document.getElementById('sound').innerHTML = data.sound
+                    document.getElementById('img').src = data.img; 
                 });
         }
     </script>
