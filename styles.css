@@ -1,0 +1,72 @@
+/* Center everything on the page */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Center the placeholder and image */
+#placeholder,
+#img {
+    width: 500px;
+    height: 600px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#img {
+    object-fit: contain;
+    background: url('https://via.placeholder.com/500x600') center / cover no-repeat; /* Fallback */
+    display: none; /* Hidden by default */
+}
+
+/* Spinner animation */
+.spinner {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #ccc;
+    border-top: 10px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Input and button styles */
+input,
+button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Spinner keyframe */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
